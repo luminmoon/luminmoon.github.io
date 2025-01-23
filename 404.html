@@ -84,56 +84,40 @@
 
 
 <footer class="page-footer footnote"><hr><div class="text"><center>
-<span>
-</span>
-<br>
-<!--不蒜子计数器-->
-<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!--添加一个访问量-->
-<span>总访问 <span id="busuanzi_value_site_pv" style="font-weight: bold;">113701</span> 次 | 本页访问 <span id="busuanzi_value_page_pv" style="font-weight: bold;">326</span> 次</span>
-</br>
-<span id="runtime_span"></span>
-
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
   var runtime_span = document.getElementById('runtime_span');
 
-  function show_runtime() {
-    // 调用定时器
-    setTimeout(show_runtime, 1000);
+<p>  function show_runtime() {<br>    &#x2F;&#x2F; 调用定时器<br>    setTimeout(show_runtime, 1000);</p>
+<pre><code>var seconds = 1000;
+var minutes = seconds * 60;
+var hours = minutes * 60;
+var days = hours * 24;
+var years = days * 365;
 
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
+var today = new Date();
+var todayYear = today.getFullYear();
+var todayMonth = today.getMonth();
+var todayDate = today.getDate();
+var todayHour = today.getHours();
+var todayMinute = today.getMinutes();
+var todaySecond = today.getSeconds();
 
-    var today = new Date();
-    var todayYear = today.getFullYear();
-    var todayMonth = today.getMonth();
-    var todayDate = today.getDate();
-    var todayHour = today.getHours();
-    var todayMinute = today.getMinutes();
-    var todaySecond = today.getSeconds();
+var t1 = Date.UTC(2024, 1, 4, 6, 9, 49); // UTC时间，月份从0开始
+var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+var diff = t2 - t1;
 
-    var t1 = Date.UTC(2024, 1, 4, 6, 9, 49); // UTC时间，月份从0开始
-    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-    var diff = t2 - t1;
+var diffYears = Math.floor(diff / years);
+var diffDays = Math.floor((diff / days) - diffYears * 365);
+var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
 
-    var diffYears = Math.floor(diff / years);
-    var diffDays = Math.floor((diff / days) - diffYears * 365);
-    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-
-    // 更新显示时间的span元素内容
-    runtime_span.innerHTML = "🦉 運行：" + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 時 " + diffMinutes + " 分 " + diffSeconds + " 秒 🦉";
-  }
-
-  show_runtime(); // 初次调用函数以启动定时器
-});
-</script>
-<p>始於2024年2月4日。</p>
+// 更新显示时间的span元素内容
+runtime_span.innerHTML = &quot;🦉 運行：&quot; + diffYears + &quot; 年 &quot; + diffDays + &quot; 天 &quot; + diffHours + &quot; 時 &quot; + diffMinutes + &quot; 分 &quot; + diffSeconds + &quot; 秒 🦉&quot;;
+</code></pre>
+<p>  }</p>
+<p>  show_runtime(); &#x2F;&#x2F; 初次调用函数以启动定时器<br>});<br></script><br>始於2024年2月4日。</p>
 </center>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
