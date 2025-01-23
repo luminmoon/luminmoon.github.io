@@ -28,7 +28,7 @@
 <meta property="og:description" content="以前一直沒想好要發什麼，這篇文章就當作測試吧">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-01-22T16:11:46.000Z">
-<meta property="article:modified_time" content="2025-01-22T16:14:35.834Z">
+<meta property="article:modified_time" content="2025-01-22T16:14:47.127Z">
 <meta property="article:author" content="LuminiferousMoonlight">
 <meta name="twitter:card" content="summary">
   
@@ -63,7 +63,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/eeb5d1ec.html"><span class="title">本站進行二次上線</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/eeb5d1ec.html"><span class="title">本站進行二次上線</span></a><a class="item title" href="/posts/eeb5d1ec.html"><span class="title">本站進行二次上線</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/LuminiferousMoonlight" target="_blank" rel="external nofollow noopener noreferrer"><img no-lazy src="/img/github-logo2.png" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="social" href="https://space.bilibili.com/1402544007" target="_blank" rel="external nofollow noopener noreferrer"><img no-lazy src="/img/bilibili-icon.png" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a></div></footer>
 </div></aside><div class="l_main" id="main">
@@ -76,7 +76,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">首頁</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">網誌</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">發布於：<time datetime="2025-01-22T16:11:46.000Z">2025-01-23</time></span><span class="sep updated"></span><span class="text updated">更新於：<time datetime="2025-01-22T16:14:35.834Z">2025-01-23</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">發布於：<time datetime="2025-01-22T16:11:46.000Z">2025-01-23</time></span><span class="sep updated"></span><span class="text updated">更新於：<time datetime="2025-01-22T16:14:47.127Z">2025-01-23</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -97,38 +97,64 @@
     </section>
     </div>
 </article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">較新文章</div><a href="/posts/eeb5d1ec.html">本站進行二次上線</a></div><div class="item" id="next"></div></section></div>
 
 
 
 
 
 
+<footer class="page-footer footnote"><hr><div class="text"><center>
+<span>
+</span>
+<br>
+<!--不蒜子计数器-->
+<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!--添加一个访问量-->
+<span>总访问 <span id="busuanzi_value_site_pv" style="font-weight: bold;">113701</span> 次 | 本页访问 <span id="busuanzi_value_page_pv" style="font-weight: bold;">326</span> 次</span>
+</br>
+<span id="runtime_span"></span>
 
-<footer class="page-footer footnote"><hr><div class="text"><p>始於2024。<br><span id="busuanzi_container_site_pv">本站總訪問量<span id="busuanzi_value_site_pv"></span>次</span></p>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  var runtime_span = document.getElementById('runtime_span');
 
-<center>
-  </br>
-  </br>
-  <script type="text/javascript">
-    function show_runtime() {
-        window.setTimeout("show_runtime()", 1000);
-        X = new Date("02/04/2024 14:09:49");
-        Y = new Date();
-        T = (Y.getTime() - X.getTime());
-        M = 24 * 60 * 60 * 1000;
-        a = T / M;
-        A = Math.floor(a);
-        b = (a - A) * 24;
-        B = Math.floor(b);
-        c = (b - B) * 60;
-        C = Math.floor((b - B) * 60);
-        D = Math.floor((c - C) * 60);
-        runtime_span.innerHTML = "⏲️ 本站已運行 " + A + "天 | " + B + "時 | " + C + "分 | " + D + "秒 ⏲️"
-    }
-    show_runtime();
-  </script>
-  <span id="runtime_span"></span>
+  function show_runtime() {
+    // 调用定时器
+    setTimeout(show_runtime, 1000);
+
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth();
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+
+    var t1 = Date.UTC(2024, 1, 4, 6, 9, 49); // UTC时间，月份从0开始
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+    var diff = t2 - t1;
+
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+
+    // 更新显示时间的span元素内容
+    runtime_span.innerHTML = "🦉 運行：" + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 時 " + diffMinutes + " 分 " + diffSeconds + " 秒 🦉";
+  }
+
+  show_runtime(); // 初次调用函数以启动定时器
+});
+</script>
+<p>始於2024年2月4日。</p>
 </center>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
